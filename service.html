@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        *{
+            font-family: Century Gothic;
+        }
+        .head{
+            z-index: 2;
+            position: relative;
+            text-align: center;
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+        }
+        .services-section{
+            z-index: 3;
+            border-radius: 25px;
+            background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(6.jpg);
+            background-size: cover;
+            padding: 60px 0;          
+        }
+        .inner-width{
+            z-index: 3;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 5px;
+            overflow: hidden;
+        }
+        .section-title{
+            z-index: 3;
+            text-align: center;
+            color: #ddd;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        .border{
+            z-index: 3;
+            width: 160px;
+            height: 2px;
+            background: #d8b6ff;
+            margin: 40px auto;
+        }
+        .services-contain{
+            z-index: 3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-box{
+            z-index: 2;
+            max-width: 30.33%;
+            padding: 10px;
+            text-align: center;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .services-icon{
+            z-index: 2;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border: 3px solid #d8b6ff;
+            border-radius: 12px;
+            color: #d8b6ff;
+            transform: rotate(45deg);
+            margin-bottom: 30px;
+            margin-top: 16px;
+            transition: ease 0.6s;
+        }
+        .services-section i{
+            z-index: 2;
+            line-height: 70px;
+            transform: rotate(-45deg);
+            font-size: 26px;
+        }
+        .service-box:hover .services-icon{
+            z-index: 2;
+            background: #d8b6ff;
+            color: #ddd;
+        }
+        .service-title{
+            z-index: 2;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .service-desc{
+            z-index: 2;
+            font-size: 16px;
+        }
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+    </style>
+</head>
+<body>
+    <div class="services-section">
+        <div class="inner-width">
+            <h1 class="head">Our Services</h1>
+            <div class="heading border"></div>
+                <div class="services-contain">
+                    <div class="service-box">
+                        <div class="services-icon">
+                            <i class="fas fa fa-user"></i>
+                        </div>
+                    <div class="service-title">Customer Centric</div>
+                    <div class="service-desc">
+                       Customer-centricity is a way of doing business that fosters a positive customer experience at every stage of the customer journey. It builds customer loyalty and satisfaction which leads to referrals for more customers
+                    </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="services-icon">
+                            <i class="fa fa-shopping-cart"></i>
+                     </div>
+                     <div class="service-title">Priority Delivery</div>
+                        <div class="service-desc">
+                            Priority Delivery is the fastest mail service offered by the Postal Service. It provides guaranteed 1-Day or 2-Day expedited service by 3 p.m. for any mailable matter and includes Rs 7200 of insurance coverage
+                    </div>
+                    </div>
+
+                    <div class="service-box">
+                        <div class="services-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="service-title">Consultant Team</div>
+                        <div class="service-desc">
+                         They are the experienced team who deliver the expert advice to the someone in the market which will help them to Buy product on less price and good quality also resolve the issues also guide in any confusion body type dresses
+                        </div>
+                        </div>
+
+                        <div class="service-box">
+                            <div class="services-icon">
+                                <i class="fas fa fa-check"></i>
+                            </div>
+                            <div class="service-title">Quality Product</div>
+                            <div class="service-desc">
+                             It involves testing of units and determining if they are within the specifications for the final product. The purpose of the testing is to determine any needs for corrective actions in the manufacturing process. Good quality meet consumer demands for better products. 
+                            </div>
+                            </div>
+                            <div class="service-box">
+                                <div class="services-icon">
+                                    <i class="fa fa-gift"></i>
+                                </div>
+                                <div class="service-title">Personal Made</div>
+                                <div class="service-desc">
+                                In this service you will be provided your cloths on your personal fitting as all we khow the universal mesurment cloth never make perfect fitting that decrease your comfort
+                                   and we believes on the comfort over style.  
+                                </div>
+                                </div>
+                                <div class="service-box">
+                         <div class="services-icon">
+                        <i class="fas fa fa-lock"></i>
+                    </div>
+                    <div class="service-title">Encrypted Information</div>
+                    <div class="service-desc">
+                    Encryption the content of personal detail in order to protect potentially sensitive information from being read by anyone other than intended recipients. Encryption often includes authentication.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

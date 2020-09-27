@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container{
+            position: relative;
+            width: 1300px;
+            height: 300px;
+            margin-top: 20px;
+            margin-left: 200px;
+            
+        }
+        .container .box{
+            position: relative;
+            width: calc(350px - 30px);
+            height: calc(350px - 30px);
+            background: rgb(39, 39, 39);
+            float: left;
+            margin: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgb(63, 63, 63);
+        }
+        .container .box .icon img{
+            width: 350px;
+            height: 350px;
+            transition: 0.5s;
+        }
+        .container .box .icon{
+            position: absolute;
+            justify-content: center;
+            width: 350px;
+            height: 350px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            transition: 0.5s;
+        }
+        .container .box:hover .icon{
+            top: 20px;
+            left: calc(50% - 40px);
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+        }
+        .container .box:hover .icon img{
+            top: 20px;
+            left: calc(50% - 40px);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        
+        
+        .container .box .content{
+            position: absolute;
+            top : 100%;
+            height: calc(100% - 100px);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        .container .box:hover .content{
+            top : 150px;   
+        }
+        .container .box .content a{
+            margin: 0;
+            text-decoration: none;
+            padding: 0;
+            color: #fff;
+            font-size: 26px;
+        }
+        .container .box .content p{
+            margin: 0;
+            padding: 0;
+            padding-top: 15px;
+            color: #fff;
+        }
+        /*******************************Heading*************************************/
+        hr{
+        margin-left: 35%;
+        margin-right: 35%;
+        }
+        .head{
+        font-family: Century Gothic;
+        font-size: 40px;
+        text-align: center;
+        color: #0ec2c9;
+        }
+
+        header{ 
+              
+        font-family: Century Gothic;         
+        height: 10vh;
+        background-size: cover;
+        background-position: top;
+        }
+        .main > ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 3%; 
+        margin-right: 3%;
+        }
+        .main > ul li{
+        display: inline-block;
+        
+        }
+        .main > ul li a{
+        text-decoration: none;
+        background: #0ec2c9;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid black;
+        transition: 0.6s ease;
+        border: 1px solid white ;
+        border-radius: 20px;
+        }
+        .main > ul li a:hover{
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        }
+
+        .main > ul li.on a{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: 1px solid white ;
+        
+        }
+        .fa{
+        margin-left: 8px;
+        }
+        .gotop-btn{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #0ec2c9;
+            bottom: 120px;
+            right: 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 28px;
+        }
+        .gotop-btn:hover{
+        	background-color: white;
+        	color: black;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <a class="gotop-btn" href="#"><i class="fa fa-arrow-up"></i></a>
+     <!--------------Head button for home-------------->
+     <header>
+        <div class="main">
+                <ul>
+                        <li><a href="home.html">Home<i class="fa fa-home"></i></a></li>
+                        <li><a href="#os">Os</i></a></li>
+                        <li><a href="#company">Company</i></a></li>
+                        <li><a href="#chip">Processor</i></a></li>
+                </ul>
+      </header>
+      <!---------------heading-------------->
+      <section>
+        <h1 id="os" class="head">Os Wise</h1><hr><br>
+      </section>
+    <div class="container">
+        <div class="box">
+            <div class="icon">
+                <img src="merge/an.png">
+            </div>
+                <div class="content">
+                    <a href="card.html">Android</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+            
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/ios.png">
+            </div>
+                <div class="content">
+                    <a href="ip.html">iOS</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/win.png">
+            </div>
+                <div class="content">
+                    <a href="">Windows Phone</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+    </div><br>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <br>
+      <section>
+        <br>
+        <h1 id="company" class="head">Company Wise</h1><hr><br>
+      </section>
+    <div class="container">
+        <div class="box">
+            <div class="icon">
+                <img src="merge/1.png">
+            </div>
+                <div class="content">
+                    <a href="">Google Pixel</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+            
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/2.png">
+            </div>
+                <div class="content">
+                    <a href="ip.html">iPhone</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/3.png">
+            </div>
+                <div class="content">
+                    <a href="">MI</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/4.png">
+            </div>
+                <div class="content">
+                    <a href="oneplus.html">Oneplus</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/5.jpg">
+            </div>
+                <div class="content">
+                    <a href="">Realme</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/6.png">
+            </div>
+                <div class="content">
+                    <a href="card.html">Samsung Galaxy</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br><br>
+    <br>
+    <section>
+    
+    <br> <h1 id="chip" class="head">Processor Wise</h1><hr><br>
+      </section>
+    <div class="container">
+        <div class="box">
+            <div class="icon">
+                <img src="merge/sd.png">
+            </div>
+                <div class="content">
+                    <a href="oneplus.html">Snapdragon</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+            
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/a.jpg">
+            </div>
+                <div class="content">
+                    <a href="ip.html">A-bionic chip</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/mt.png">
+            </div>
+                <div class="content">
+                    <a href="">Mediatek</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/k.png">
+            </div>
+                <div class="content">
+                    <a href="">Kirin</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+        <div class="box">
+            <div class="icon">
+                <img src="merge/ee.png">
+            </div>
+                <div class="content">
+                    <a href="card.html">Exynos</a>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta totam qui blanditiis nobis? Eligendi aliquam tenetur accusantium exercitationem cum commodi atque, repellat dolor quod a tempora amet ex natus quidem!
+                    </p>
+                </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

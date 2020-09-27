@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: Century Gothic;
+        }
+        body{
+            background: #fff;
+        }
+        .contain{
+        width: 100%;
+        
+        margin-left: 2%;
+        
+        
+        
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card{
+            border-top-right-radius: 30px;
+            box-shadow: 0 20px 40px rgb(63, 63, 63);
+            width: 360px;
+            background: #f1f1f1;
+            margin: 20px;
+            border-bottom-left-radius: 30px;
+        }
+        .top-section{
+
+            border-top-right-radius: 30px;
+            height: 310px;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+        }
+       .img-con{
+        
+            width: 350px;
+            height: 300px;
+        }
+        .nav img{
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ddd;
+            margin: 8px 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .nav img:hover{
+            border-color: #6ab04c;
+        }
+        .price{
+            position: absolute;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: #6ab04c;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .product-info{
+            padding: 24px;
+        }
+        .name{
+            text-transform: uppercase;
+            font-size: 24px;
+            color: #333;
+        }
+        .dis{
+            font-size: 16px;
+        }
+        .btn{
+            display: block;
+            background: #6ab04c;
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            justify-content: center;
+            transition: 0.3s;
+            border-radius: 20px;
+        }
+        .btn:hover{
+            background: #333;
+
+        }
+        /*******************************Heading*************************************/
+        hr{
+        margin-left: 35%;
+        margin-right: 35%;
+        }
+        .head{
+        font-family: Century Gothic;
+        font-size: 40px;
+        text-align: center;
+        color: #6ab04c;
+        }
+
+        header{   
+        font-family: Century Gothic;         
+        height: 10vh;
+        background-size: cover;
+        background-position: top;
+        }
+        .main > ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 3%; 
+        margin-right: 3%;
+        }
+        .main > ul li{
+        display: inline-block;
+        
+        }
+        .main > ul li a{
+        text-decoration: none;
+        background: #6ab04c;
+        color: white;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+        border: 1px solid white ;
+        border-radius: 20px;
+        }
+        .main > ul li a:hover{
+        background-color: white;
+        color: black;
+        }
+
+        .main > ul li.on a{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: 1px solid white ;
+        
+        }
+        .fa{
+        margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!--------------Head button for home-------------->
+    <header>
+        <div class="main">
+                <ul>
+                        <li><a href="slide.html">Home<i class="fa fa-home"></i></a></li>
+                </ul>
+      </header>
+      <!---------------heading-------------->
+      <section>
+        <h1 class="head">Galaxy M-Series</h1><hr><br><br>
+      </section>
+     <!-------------------Contant-------------------> 
+    <div class="contain">
+        <!---------Card--------->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container" class="img-con" src="card/sam/3.PNG" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img(this)" src="card/sam/3.PNG" alt="">
+                <img onclick="change_img(this)" src="card/sam/2.PNG" alt="">
+                <img onclick="change_img(this)" src="card/sam/1.jpg" alt="">
+            </div>
+            <div class="price">Rs 13000</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                    Galaxy M10s
+                </div>
+                <div class="dis">
+                    Mega power 3500 MAH battery life. 
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        <!---------card2 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container2" class="img-con" src="card/sam/4.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img2(this)" src="card/sam/4.jpeg" alt="">
+                <img onclick="change_img2(this)" src="card/sam/5.jpeg" alt="">
+                <img onclick="change_img2(this)" src="card/sam/6.jpeg" alt="">
+            </div>
+            <div class="price">Rs 19000</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                    Galaxy M30s
+                </div>
+                <div class="dis">
+                    Mega power 6000 MAH battery life.<br>
+                    6GB RAM|128 GB ROM|
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        <!---------card3 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container3" class="img-con" src="card/sam/7.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img3(this)" src="card/sam/7.jpeg" alt="">
+                <img onclick="change_img3(this)" src="card/sam/8.jpeg" alt="">
+                <img onclick="change_img3(this)" src="card/sam/9.jpeg" alt="">
+            </div>
+            <div class="price">Rs 18999</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                    Galaxy M40s
+                </div>
+                <div class="dis">
+                    Mega power 6000 MAH battery life.<br>
+                    4GB RAM|64 GB ROM|
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        
+        
+        
+        
+    </div>
+    <!---------------------Heading 2-------------------------->
+    <section>
+        <br>
+        <br>
+        <br><br><br><h1 class="head">Galaxy A-Series</h1><hr><br><br>
+    </section>
+    <!------------------------content------------------------>
+    <div class="contain">
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container4" class="img-con" src="card/sam/13.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img4(this)" src="card/sam/13.jpeg" alt="">
+                <img onclick="change_img4(this)" src="card/sam/14.jpeg" alt="">
+                <img onclick="change_img4(this)" src="card/sam/15.jpeg" alt="">
+            </div>
+            <div class="price">Rs 31500</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                    Galaxy A71
+                </div>
+                <div class="dis">
+                 4500 MAH lithium-ion battery.<br>
+                    8GB RAM|128 GB ROM|
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        <!---------card2 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container5" class="img-con" src="card/sam/16.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img5(this)" src="card/sam/16.jpeg" alt="">
+                <img onclick="change_img5(this)" src="card/sam/19.jpeg" alt="">
+                <img onclick="change_img5(this)" src="card/sam/20.jpeg" alt="">
+            </div>
+            <div class="price">Rs 20000</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                galaxy a51
+                </div>
+                <div class="dis">
+                    Mega power 4000 MAH battery life.<br>6GB ROM|64 GB ROM 
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        
+       <!---------card3 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container6" class="img-con" src="card/sam/23.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img6(this)" src="card/sam/23.jpeg" alt="">
+                <img onclick="change_img6(this)" src="card/sam/21.jpeg" alt="">
+                <img onclick="change_img6(this)" src="card/sam/22.jpeg" alt="">
+            </div>
+            <div class="price">Rs 15899</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                galaxy a30
+                </div>
+                <div class="dis">
+                    4000 MAH Li-ion battery.<br>4GB ROM|64 GB ROM 
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        
+    </div>
+
+<!---------------------Heading 3-------------------------->
+    <section>
+        <br>
+        <br>
+        <br><br><br><h1 class="head">Galaxy S-Series</h1><hr><br><br>
+    </section>
+    <!------------------------content------------------------>
+    <div class="contain">
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container7" class="img-con" src="card/sam/24.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img7(this)" src="card/sam/24.jpeg" alt="">
+                <img onclick="change_img7(this)" src="card/sam/25.jpeg" alt="">
+                <img onclick="change_img7(this)" src="card/sam/26.jpeg" alt="">
+            </div>
+            <div class="price">Rs 41500</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                    Galaxy s10 lite
+                </div>
+                <div class="dis">
+                 6000 MAH lithium-ion battery.<br>
+                    8GB RAM|128 GB ROM|
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        <!---------card2 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container8" class="img-con" src="card/sam/27.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img8(this)" src="card/sam/27.jpeg" alt="">
+                <img onclick="change_img8(this)" src="card/sam/28.jpeg" alt="">
+                <img onclick="change_img8(this)" src="card/sam/29.jpeg" alt="">
+            </div>
+            <div class="price">Rs 39000</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                galaxy s20
+                </div>
+                <div class="dis">
+                    Mega power 4000 MAH battery life.<br>6GB ROM|64 GB ROM| 
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        
+       <!---------card3 ----->
+        <div class="card">
+            <div class="top-section">
+                <img id="image-container9" class="img-con" src="card/sam/30.jpeg" alt="">
+            </div>
+            <div class="nav">
+                <img onclick="change_img9(this)" src="card/sam/30.jpeg" alt="">
+                <img onclick="change_img9(this)" src="card/sam/31.jpeg" alt="">
+                <img onclick="change_img9(this)" src="card/sam/32.jpeg" alt="">
+            </div>
+            <div class="price">Rs 40999</div>
+        
+
+            <div class="product-info">
+                <div class="name">
+                galaxy s7
+                </div>
+                <div class="dis">
+                    3600 MAH Li-ion battery.<br>4GB ROM|32 GB ROM|
+                </div>
+                <a class="btn" href="#">Add to Cart</a>
+            </div>
+
+        </div>
+        
+        
+        </div>
+
+    <script type="text/javascript">
+        var container = document.getElementById("image-container");
+        function change_img(image){
+            container.src =image.src;
+        }
+        var container2 = document.getElementById("image-container2");
+        function change_img2(image){
+            container2.src =image.src;
+        }
+        var container3 = document.getElementById("image-container3");
+        function change_img3(image){
+            container3.src =image.src;
+        }
+        var container4 = document.getElementById("image-container4");
+        function change_img4(image){
+            container4.src =image.src;
+        }
+         var container5 = document.getElementById("image-container5");
+        function change_img5(image){
+            container5.src =image.src;
+        }
+         var container6 = document.getElementById("image-container6");
+        function change_img6(image){
+            container6.src =image.src;
+        }
+          var container7 = document.getElementById("image-container7");
+        function change_img7(image){
+            container7.src =image.src;
+        }
+          var container8 = document.getElementById("image-container8");
+        function change_img8(image){
+            container8.src =image.src;
+        }
+          var container9 = document.getElementById("image-container9");
+        function change_img9(image){
+            container9.src =image.src;
+        }
+        
+    </script>
+
+
+</body>
+</html>

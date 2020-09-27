@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <style>
+        *{
+            font-family: Century Gothic;
+        }
+        .carousel-inner{
+            height: 92vh;
+            min-height: 300px;
+            background: no-repeat center center scroll;
+            background-size: cover;
+        }
+        .carousel-caption{
+            bottom: 45%;
+        }
+        .carousel-caption h5{
+            font-size: 45px;
+          
+            letter-spacing: 2px;
+            margin-top: 25px;
+            
+        }
+        .carousel-caption p{
+            
+            margin-top: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            
+        }
+        .carousel-caption a{
+            text-decoration: none;
+            text-transform: uppercase;
+            background: #000000ce;
+            padding: 10px 30px;
+            display: inline-block;
+            color: #fff;
+            margin-top: 15px;
+            transition: ease 1s;
+        }
+        .carousel-caption a:hover{
+            background: #fff;
+            color: black;
+        }
+      
+        .navbar-nav a{
+            font-family: poppins;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .navbar-light .navbar-brand{
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .f-11, .f-12, .f-1, .f-22, .f-21, .f-42, .f-41, .f-32, .f-31, .zoom{
+            opacity: 0;
+        }
+        .f-11 .animated, .f-12 .animated, .f-1 .animated,.f-22 .animated, .f-21 .animated, .f-42 .animated, .f-41 .animated, .f-32 .animated, .f-31 .animated, .zoom .animated{
+            opacity: 1!important;
+        }
+        .fa {
+            font-size: 25px;
+        }
+        .left-bar {
+            float: left;
+            width: 5%;
+            margin-top:10px;
+        }
+        .right-bar {
+            margin-top:10px;
+            float: left;
+            width: 95%;
+        }
+        .row-bar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .review-rating:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .left-review {
+            float: left;
+            width: 30%;
+            margin-top:10px;
+            text-align: center;
+        }
+        .right-review {
+            float: left;
+            width: 70%;
+            margin-top:10px;
+        }
+        .review-title{
+            font-size: 56pt;
+        }
+        .review-star{
+            margin: 0 0 10px 0;
+        }
+        .review-people .fa{
+            font-size: 11pt;
+        }
+        .bar-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: white;
+        }
+        .bar-5 {height: 18px; background-color: #57bb8a;}
+        .bar-4 {height: 18px; background-color: #9ace6a;}
+        .bar-3 {height: 18px; background-color: #ffcf02;}
+        .bar-2 {height: 18px; background-color: #ff9f02;}
+        .bar-1 {height: 18px; background-color: #ff6f31;}
+        .star-rating{
+            text-align: center;
+        }
+        .star-rating .fa:hover{
+            color: orange;
+        }
+        .heading {
+            font-size: 25px;
+            color: rgb(48, 48, 48);
+            border-bottom: 2px solid #eee;
+        }
+        @media (max-width: 400px) {
+            .left-bar, .right-bar, .left-review, .right-review {
+                width: 100%;
+            }
+        }
+        .footer-distributed{
+          border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background: rgb(80, 80, 80);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 55px 50px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left{
+            width: 40%;
+        }
+
+        /* The company logo */
+
+        .footer-distributed h3{
+            color:  #ffffff;
+            font: normal 36px 'Open Sans', cursive;
+            margin: 0;
+        }
+
+        .footer-distributed h3 span{
+            color:  lightseagreen;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links{
+            color:  #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+
+        .footer-distributed .footer-links a{
+            display:inline-block;
+            line-height: 1.8;
+        font-weight:400;
+            text-decoration: none;
+            color:  inherit;
+        }
+
+        .footer-distributed .footer-company-name{
+            color:  rgb(204, 204, 204);
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center{
+            width: 35%;
+        }
+
+        .footer-distributed .footer-center i{
+            background-color:  #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope{
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p{
+            display: inline-block;
+            color: #ffffff;
+        font-weight:400;
+            vertical-align: middle;
+            margin:0;
+        }
+
+        .footer-distributed .footer-center p span{
+            display:block;
+            font-weight: normal;
+            font-size:14px;
+            line-height:2;
+        }
+
+        .footer-distributed .footer-center p a{
+            color:  lightseagreen;
+            text-decoration: none;;
+        }
+
+        .footer-distributed .footer-links a:before {
+        content: "|";
+        font-weight:300;
+        font-size: 20px;
+        left: 0;
+        color: #fff;
+        display: inline-block;
+        padding-right: 5px;
+        }
+
+        .footer-distributed .footer-links .link-1:before {
+        content: none;
+        }
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right{
+            width: 20%;
+        }
+
+        .footer-distributed .footer-company-about{
+            line-height: 20px;
+            color:  #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span{
+            display: block;
+            color:  #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons{
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color:  #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        /* If you don't want the footer to be responsive, remove these media queries */
+
+        @media (max-width: 880px) {
+
+            .footer-distributed{
+                font: bold 14px sans-serif;
+            }
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right{
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i{
+                margin-left: 0;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">iSMART.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="service.html">Servies</a>        
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="contact us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signin.html">Sign In</a>
+            </li>
+          </ul>
+        </div>
+        </div>    
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="home/11.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounceInRight" style="animation-delay: 0.25s;">iSMART</h5>
+                <p class="animated bounceInLeft" style="animation-delay: 0.5s;">A WEBSITE FOR ALL SMARTPHONES YOU NEED QUALITY WITH LABEL</p>
+                <p class="animated bounceInRight" style="animation-delay: 0.75s;"><a href="quality.html">More Info</a></p>
+            </div>            
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="home/22.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated fadeInDown" style="animation-delay: 0.25s;">NEVER SETTLE</h5>
+                <p class="animated fadeInUp" style="animation-delay: 0.5s;">Merger With Many Company to Provide You The Best Deal Available In Market</p>
+                <p class="animated bounceInRight" style="animation-delay: 0.75s;"><a href="merger.html">More Info</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="home/33.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounceInRight" style="animation-delay: 0.25s;">GET BEST DEAL</h5>
+                <p class="animated bounceInLeft" style="animation-delay: 0.5s;"> Get best deal at best price that you never seen before with care facility and many more that make your purchasing experince more better</p>
+                <p class="animated bounceInUp" style="animation-delay: 0.75s;"><a href="">Today Deal</a></p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <section>
+          <div class="container-fluid">
+              <h1 class="text-center text-capitalize pt-5 f-1">feed</h1>
+              <hr class="w-25 mx-auto pb-5">
+            <div class="row mb-5">
+                <div class="col-lg-5 col-md-5 col-12 mx-auto f-11">
+                    <img src="home/88.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 mt-5 pl-5 f-12">
+                    <h1 class="pb-3">Best Android Experience</h1>
+                    <hr>
+                    <p>
+                        Take studio-quality photos without the studio - no editing required. Pixel 4 is the first camera that can take a picture of the Milky Way with one tap. <br>
+                        Stock Android is Android in its purest form as Google created it. With the Nexus program, Stock Android was targeted at Android developers but ended up being loved by many regular Android users. Nexus buyers enjoyed timely updates and hassle-free user experience. <br>
+                        Being the purest form of Android, Stock Android software is easy to patch for security and feature updates over the air. Also, the experience stays consistent across hardware diversity. Android smartphone ecosystem faces massive hardware and software fragmentation. Hence, Android software versions and security patches are all over the place. <br> 
+                    </p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 mt-5 pl-5 f-21 text-right">
+                    <br>
+                    <br>
+                    <h1 class="pb-3">Fluid Display 90 Hz refresh rate</h1>
+                    <hr>
+                    <p>
+                        Experience amazingly smooth and responsive motion on the OnePlus 7T Pro’s immersive edge-to-edge display. Whether you’re playing intense games, or just browsing the web, everything is more impressive in borderless 90 Hz.<br>
+                        See everything in stunning clarity on the OnePlus 7T Pro’s spacious 6.67 inch display. Videos and images are clear and sharp, while text is smooth, bold, and easy to read with an astounding 516 pixels per inch.<br>
+                        The OnePlus 7T Pro’s beautifully curved QHD+ Fluid Display offers a high screen-to-body ratio for a more immersive experience, whether you’re gaming, watching a movie, or browsing the web.  
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-5 col-12 mx-auto f-22">
+                    <img src="home/7.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-5 col-md-5 col-12 mx-auto f-31">
+                    <img src="home/9.jpg" class="img-fluid">
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 mt-5 pl-5 f-32">
+                    <br>
+                    <h1 class="pb-3">Ultra Amazing Camera</h1>
+                    <hr>
+                    <p>
+                        The Samsung Galaxy S20 Ultra is the South Korean electronics giant's latest flagship smartphone. The S20 Ultra's 103mm f/3.5-aperture lens provides a native 4x optical zoom. The 10x hybrid combines image information from the 48MP tele-camera and from the high-resolution 108MP main camera.<br>
+                        For the tele-camera, Samsung has implemented a periscope-style lens similar to that in Huawei’s and Honor’s flagship phones. The S20 Ultra’s 103mm f/3.5-aperture lens provides a native 4x optical zoom. The 10x hybrid combines image information from the 48MP tele-camera and from the high-resolution 108MP main camera. Both the primary and tele-cameras also feature PDAF autofocus and optical image stabilization.<br> 
+                        Samsung has also made some changes to the ultra-wide camera on the S20 Ultra compared to previous generations, although they’re slightly less dramatic than the primary sensor resolution and tele-camera upgrades. The new model now features a 13mm f/2.2-aperture lens and 12MP sensor, compared to the wider 12mm f/2.2 optic and higher-resolution 16MP sensor on the S10 Plus. The lower resolution ensures a bigger pixel size of 1.4µm on the latest model, and the 12MP resolution remains perfectly adequate for the majority of smartphone shooters.
+                    </p>
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 mt-5 pl-5 f-41 text-right">
+                    <h1 class="pb-3">Turbo Charging</h1>
+                    <hr>
+                    <p>
+                        From smartphones to laptops and cables to chargers, manufacturers are talking about “Fast Charging”, but what does it really mean? Fast Charging is a term frequently used to market chargers and devices capable of charging faster than the current charging standard (5 Watts). Though there are multiple technologies that enable these fast charging speeds, there is no industry-standard language around them. In addition to this lack of conformity, you should be aware that though many manufacturers claim their product delivers fast charging speeds, it may only provide the standard 5W. <br>
+                        We have put together this guide to help you understand fast charging and find the fast charging technology that is right for you.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-5 col-12 mx-auto f-42">
+                    <br>
+                    <br>
+                    <img src="home/34.jpg" class="img-fluid">
+                </div>
+            </div>
+          </div>
+      </section>
+      <br>
+      <div class="container zoom">
+          <h2 class="heading">Reviews</h2>
+          <div class="review-rating">
+              <div class="left-review">
+                  <div class="review-title">4.5</div>
+                  <div class="review-star" title="4.5">
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star-half-o"></span>
+                  </div>
+                  <div class="review-people"><i class="fa fa-user"></i> 74,56,600 Total</div>
+              </div>
+              <div class="right-review">
+                  <div class="row-bar">
+                      <div class="left-bar">5</div>
+                      <div class="right-bar">
+                          <div class="bar-container" title="80%">
+                              <div class="bar-5" title="80%" style="width: 80%"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row-bar">
+                      <div class="left-bar">4</div>
+                      <div class="right-bar">
+                          <div class="bar-container" title="50%">
+                              <div class="bar-4" title="50%" style="width: 50%"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row-bar">
+                      <div class="left-bar">3</div>
+                      <div class="right-bar">
+                          <div class="bar-container" title="10%">
+                              <div class="bar-3" title="10%" style="width: 10%"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row-bar">
+                      <div class="left-bar">2</div>
+                      <div class="right-bar">
+                          <div class="bar-container" title="5%">
+                              <div class="bar-2" title="5%" style="width: 5%"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row-bar">
+                      <div class="left-bar">1</div>
+                      <div class="right-bar">
+                          <div title="20%" class="bar-container">
+                              <div class="bar-1" title="20%" style="width: 20%"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+  
+        <h3>iSMART<span>.com</span></h3>
+  
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+        
+            <a href="#">Pricing</a>
+        
+            <a href="aboutus.html">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+        </p>
+  
+        <p class="footer-company-name">iSMART.com © 2020</p>
+    </div>
+  
+    <div class="footer-center">
+  
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>44D Lorem ipsum</span>  , Lorem ipsum </p>
+        </div>
+  
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+91 987 654 3210</p>
+        </div>
+  
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@iSMART.com</a></p>
+        </div>
+  
+    </div>
+  
+    <div class="footer-right">
+  
+        <p class="footer-company-about">
+            <span>About the company</span>
+            A Career making site where you <strong>Choose</strong> your <strong>Goal</strong> as per your dream
+        </p>
+  
+        <div class="footer-icons">
+  
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+  
+       </div>
+  
+    </div>
+  
+  </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.f-1').waypoint(function(direction){
+            $('.f-1').addClass('animated fadeInUp')
+        }, {
+            offset: '50%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-11').waypoint(function(direction){
+            $('.f-11').addClass('animated fadeInLeft')
+        }, {
+            offset: '50%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-12').waypoint(function(direction){
+            $('.f-12').addClass('animated fadeInRight')
+        }, {
+            offset: '50%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-21').waypoint(function(direction){
+            $('.f-21').addClass('animated fadeInLeft')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-22').waypoint(function(direction){
+            $('.f-22').addClass('animated fadeInRight')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-31').waypoint(function(direction){
+            $('.f-31').addClass('animated fadeInLeft')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-32').waypoint(function(direction){
+            $('.f-32').addClass('animated fadeInRight')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-41').waypoint(function(direction){
+            $('.f-41').addClass('animated fadeInLeft')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.f-42').waypoint(function(direction){
+            $('.f-42').addClass('animated fadeInRight')
+        }, {
+            offset: '60%'
+        })
+    });
+    $(document).ready(function(){
+        $('.zoom').waypoint(function(direction){
+            $('.zoom').addClass('animated fadeInUp')
+        }, {
+            offset: '60%'
+        })
+    });
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
